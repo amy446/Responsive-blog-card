@@ -1,0 +1,166 @@
+@font-face {
+     font-family: 'font';
+     src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+@font-face {
+     font-family: 'font2';
+     src: url(assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+
+:root{
+     /* color */
+     --clr-yellow: #F4D04E;
+     --clr-gray950: #111111;
+     --clr-gray500: #6B6B6B;
+     --clr-white: #fff;
+}
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body{
+     overflow-x: hidden;
+     font-family: 'font';
+     background: var(--clr-yellow);
+     letter-spacing: 0;
+     line-height: 150%;
+}
+
+.card{
+     background: var(--clr-white);
+     border: 1px solid var(--clr-gray950);
+     border-radius: 20px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50% , -50%);
+     box-shadow: 8px 8px 0 0 #111111;
+     width: 24rem;
+}
+
+.card-content{
+     padding: 1.5rem;
+}
+
+.illustration{
+     border-radius: 0.625rem;
+     margin-bottom: 1.5rem;
+}
+
+.category, .publish, .hover, .description{
+     margin-bottom: .75rem;
+}
+
+.category{
+     color: var(--clr-gray950);
+     font-size: 0.875rem;
+     font-weight: 800;
+     background: var(--clr-yellow);
+     border-radius: 0.25rem;
+     padding: .25rem .75rem;
+     width: 5.125rem ;
+     text-align: center;
+}
+
+.publish{
+     font-weight: 500;
+     font-size: .875rem;
+     color: var(--clr-gray950);
+}
+
+.hover{
+     color: var(--clr-gray950);
+     font-size: 1.5rem;
+     font-weight: 800;
+     cursor: pointer;
+     transition: .1s;
+}
+
+.hover:hover{
+     color: var(--clr-yellow);
+}
+
+.description{
+     color: var(--clr-gray500);
+     font-size: 1rem;
+     font-weight: 500;
+}
+
+.author{
+     display: flex;
+     gap: .75rem;
+     align-items: center;
+}
+
+.author img{
+     width: 2rem;
+     height: 2rem;
+}
+
+.author p{
+     color: var(--clr-gray950);
+     font-size: .875rem;
+     font-weight: 800;
+}
+
+@media (max-width:580px){
+     .card{
+          width: 18.75rem;
+     }
+
+     .illustration{
+          width: 100%;
+     }
+
+     .category, .publish{
+          font-size: .75rem;
+     }
+
+     .hover{
+          font-size: 1.25rem;
+     }
+
+     .description{
+          font-size: .875rem;
+     }
+}
+
+@media (max-width:463px){
+     .card{
+          width: 17.5rem;
+     }
+
+     .illustration, .category , .publish , .hover{
+          margin-bottom: 10px;
+     }
+
+     .category{
+          padding:0;
+          text-align: center;
+     }
+
+     .category, .publish{
+          font-size: .625rem;
+     }
+
+     .hover{
+          font-size: 1.125rem;
+     }
+
+     .description{
+          font-size: 0.75rem;
+     }
+
+     .author p{
+          font-size: .75rem;
+     }
+
+     .author img{
+          width: 28px;
+          height: 28px;
+     }
+}
